@@ -19,5 +19,5 @@ if __name__ == "__main__":
     json_data = read_json_from_arg()
     myDeformSim = SimulatorDeform(json_data)
     myDeformSim.preprocess()
-    myDeformSim.generate_MPM()
-    myDeformSim.generate_MPM()
+    myDeformSim.generate_PC()
+    myDeformSim.MPMPytorch_deform()

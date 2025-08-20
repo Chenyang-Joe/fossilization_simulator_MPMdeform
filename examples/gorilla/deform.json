@@ -1,0 +1,31 @@
+{
+    "model_path" : "examples/gorilla/gorilla_10000.obj",
+    "faces_limitation" : 2e4,
+    "grid_res" : 100,
+
+    "MPMPytorch_config" : {
+        "tag" : "deform_test",
+        "elasticity_type" : "CorotatedElasticity",
+        "plasticity_type" : "DruckerPragerPlasticity",
+        "color" : "blue",
+        "scale_factor" : 0.6,
+        "num_frames" : 50,
+        "steps_per_frame" : 10,
+        "initial_velocity" : "0.0 0.0 0.0",
+        "center" : "0.5 0.5 0.5",
+        
+
+        "boundary_conditions" : {
+            "type" : "fossilization_exp",
+            "start_time" : 0.0,
+            "end_time" : 1e3
+        },
+
+        "gif_info" : {
+            "animation_gif" : true,
+            "gif_save_dir" : "fossilization_simulator_MPMdeform/examples/gorilla/MPM_gif_output",
+            "sample_rate" : 30
+        }
+    }
+
+}
