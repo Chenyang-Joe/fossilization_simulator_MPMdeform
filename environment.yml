@@ -1,4 +1,4 @@
-name: mpmpytorch
+name: mpmpytorch_deform
 channels:
   - conda-forge
 dependencies:

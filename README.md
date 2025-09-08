@@ -11,16 +11,19 @@ This repository provides a simulator for fossilization and deformation of 3D mod
 
 ## Installation
 
-1. **Install CUDA** according to your device. The simulator is tested with CUDA 12.9.
+
+1. **Install Conda environment** using the provided `environment.yml`:
+   ```bash
+   conda env create -f environment.yml
+   conda activate mpmpytorch_deform
+   ```
+
+2. **Install CUDA** according to your device. The simulator is tested with CUDA 12.9.
    - Use PyTorch wheels built with CUDA 12.9 (please help yourself if your driver supports a different CUDA level):
      ```bash
      pip install torch torchvision open3d --extra-index-url=https://download.pytorch.org/whl/cu129
      ```
-2. **Install Conda environment** using the provided `environment.yml`:
-   ```bash
-   conda env create -f environment.yml
-   conda activate mpmpytorch
-   ```
+
 3. **Download example datasets**:
    - [deform_example_fragments and deform_example_individual](https://drive.google.com/drive/folders/1a7EJi5G85difbT4v0Fc6JyZhQsQEeqIJ?usp=sharing)
    - These folders demonstrate deformation of single products and fragmented products.

@@ -110,7 +110,7 @@ class SimulatorDeformFragments:
         self.downsampling()
         self.pruning()
         self.rescale()
-        self.vanilla_mesh_concat.export("./data/vanilla_mesh.obj")
+        # self.vanilla_mesh_concat.export("./data/vanilla_mesh.obj")
         print("Done preprocess\n")
 
 
@@ -398,7 +398,7 @@ class SimulatorDeformFragments:
                 F = self.plasticity(F)
         self.frames.append(x.cpu().numpy())
 
-        self.export_MPMPytorch_PC(x)
+        # self.export_MPMPytorch_PC(x)
 
         self.MPMPC_result = x.clone()
         # self.export_MPMPytorch_PC(self.MPMPC_result, save_path="./dev/MPMPC_after.obj")

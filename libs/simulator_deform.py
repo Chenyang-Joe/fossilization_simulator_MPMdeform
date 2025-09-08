@@ -380,7 +380,7 @@ class SimulatorDeform:
                 F = self.plasticity(F)
         self.frames.append(x.cpu().numpy())
 
-        self.export_MPMPytorch_PC(x)
+        # self.export_MPMPytorch_PC(x)
 
         self.MPMPC_result = x.clone()
         # self.export_MPMPytorch_PC(self.MPMPC_result, save_path="./dev/MPMPC_after.obj")
