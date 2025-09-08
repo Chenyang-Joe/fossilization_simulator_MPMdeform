@@ -448,7 +448,7 @@ class SimulatorDeformFragments:
             self.final_mesh_list[i].export(save_name)
             print(f"Save deformed mesh to {save_name}")
         self.final_mesh_concat = trimesh.util.concatenate(self.final_mesh_list)
-        self.final_mesh_concat.export(self.save_folder + "deformed_result_concat.obj")
+        self.final_mesh_concat.export(os.path.join(self.save_folder, "deformed_result_concat.obj"))
         print("Done mesh reconstruction\n")
     
     def clean_up(self):
