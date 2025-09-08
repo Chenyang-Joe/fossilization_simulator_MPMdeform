@@ -20,8 +20,5 @@ dependencies:
       - embreex
       - pyembree
       - mpm-pytorch
-      # Use PyTorch wheels built with CUDA 12.9 (change cu129 if your driver supports a different CUDA level)
-      - --extra-index-url=https://download.pytorch.org/whl/cu129
-      - torch
-      - torchvision
       - open3d
+
