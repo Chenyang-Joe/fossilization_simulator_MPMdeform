@@ -1,0 +1,27 @@
+name: mpmpytorch
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - numpy
+  - scipy
+  - matplotlib
+  - pandas
+  - tqdm
+  - scikit-image
+  - scikit-learn
+  - trimesh
+  - meshplot
+  - pip
+  - ipykernel
+  - jupyterlab 
+  - pythreejs
+  - pip:
+      - embreex
+      - pyembree
+      - mpm-pytorch
+      # Use PyTorch wheels built with CUDA 12.9 (change cu129 if your driver supports a different CUDA level)
+      - --extra-index-url=https://download.pytorch.org/whl/cu129
+      - torch
+      - torchvision
+      - open3d
