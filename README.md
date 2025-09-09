@@ -48,6 +48,16 @@ This repository provides a simulator for fossilization and deformation of 3D mod
 - `grid_res`: Grid resolution for MPM points (e.g., 100)
 - `animate_info.gif_save_dir`: Path to save animation GIF
 - `sample_rate`: Frame sampling rate for GIF output
+- `force_info.major_force.region_proj_direction`: Specifies the direction of the major force vector. By default, force direction is randomized. To align with a specific direction (e.g., from fractureBEM), configure as follows:
+            ```json
+            "major_force" : {
+                "radius" : 0.2,
+                "force_magnitude" : 0.8,
+                "disk_shift" : 0.1,
+                "region_proj_direction" : [2, 3, 2]
+            }
+            ```
+  **Important**: When aligning with [fossilization_simulator_frBEM](https://github.com/Chenyang-Joe/fossilization_simulator_FrBEM) force direction, use the opposite direction vector. For example, if fractureBEM uses `0 0 1`, set this parameter to `[0, 0, -1]`. 
 
 Most other parameters relate to MPM simulation and typically do not need modification. 
 
